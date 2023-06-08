@@ -1,4 +1,4 @@
-package tn.esprit.firstsb_project;
+package tn.esprit.firstsb_project.entities;
 
 import lombok.*;
 
@@ -33,7 +33,7 @@ public class Skieur implements Serializable {
     @ManyToMany
     private List<Piste> piste;
 
-    @OneToOne(mappedBy = "skieur")
+    @OneToOne
     private Abonnement abonnement;
 
     @OneToMany(mappedBy = "skieur")

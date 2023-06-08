@@ -1,4 +1,4 @@
-package tn.esprit.firstsb_project;
+package tn.esprit.firstsb_project.entities;
 
 import lombok.*;
 
@@ -29,6 +29,5 @@ public class Abonnement implements Serializable {
     @Enumerated
     private TypeAbonnement typeAbon;
 
-    @OneToOne
-    private Skieur skieur;
+
 }
