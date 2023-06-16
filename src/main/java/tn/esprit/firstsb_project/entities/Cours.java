@@ -35,4 +35,5 @@ public class Cours implements Serializable {
     private List<Inscription> inscription;
 
 
+
 }

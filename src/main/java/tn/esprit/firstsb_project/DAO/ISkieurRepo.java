@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import tn.esprit.firstsb_project.entities.Skieur;
+import tn.esprit.firstsb_project.entities.TypeAbonnement;
 
 import java.util.Date;
 import java.util.List;
@@ -23,6 +24,8 @@ public interface ISkieurRepo extends JpaRepository<Skieur,Long> {
 
     @Query("select s from Skieur s where s.nomS= :nom and s.prenomS =:prenom")
     public Skieur getSkieurByNomSAndPrenomS(@Param("nom") String nom, @Param("prenom")String prenom);
+
+    List<Skieur> findByAbonnement_TypeAbonnement(TypeAbonnement typeAbonnement);
 
 
 

@@ -19,5 +19,5 @@ public interface IAbonnementRepo extends JpaRepository<Abonnement,Long> {
 
     List<Abonnement> findByDateDebutBetween(LocalDate dateD,LocalDate dateF);
 
-
+    List<Abonnement> findByTypeAbonnement(TypeAbonnement typeAbonnement);
 }
